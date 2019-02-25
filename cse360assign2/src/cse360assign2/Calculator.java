@@ -20,7 +20,7 @@ public class Calculator {
 	 * Returns the current total.
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	/**
 	 * Adds a user entered value to the total.
@@ -28,7 +28,7 @@ public class Calculator {
 	 * @param value the number that will be added to the total.
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	/**
 	 * Subtracts a user entered value from the total.
@@ -36,7 +36,7 @@ public class Calculator {
 	 * @param value the number that will be subtracted from the total.
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	/**
 	 * Multiplies the total by a user entered value.
@@ -44,7 +44,7 @@ public class Calculator {
 	 * @param value the number that will be multiplied by the total.
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	/**
 	 * Divides the total by a user entered value.
@@ -52,7 +52,12 @@ public class Calculator {
 	 * @param value the number that the total will be divided by.
 	 */
 	public void divide (int value) {
-		
+		if (value == 0) {
+			total = 0;
+		}
+		else {
+			total = total / value;
+		}
 	}
 	/**
 	 * Returns the history of all actions performed by the Calculator.
